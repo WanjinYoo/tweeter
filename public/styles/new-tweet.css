@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 section .textbox{
-  border-bottom: 6px solid black;
+  border-bottom: 5px solid #545149;
   margin-bottom: 0.5em;
 }
 section .count-text{
@@ -35,4 +35,5 @@ section .count-text button{
 }
 section .count-text output{
   font-family: 'Bungee', cursive;
+  color: #545149;
 }
