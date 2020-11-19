@@ -1,14 +1,14 @@
 $(() => {
-
   $(`#scroll-button`).hide();
   $(window).scroll(function() {
-    if ($(window).scrollTop() === 0) {
-      $(`nav`).show();
-      $(`#scroll-button`).hide();
-    }
-    else {
+    
+    if ($(window).scrollTop() > 120) {
       $(`#scroll-button`).slideDown();
       $(`nav`).hide();
+    }
+    else {
+      $(`nav`).show();
+      $(`#scroll-button`).hide();
     }
   });
   $(`#scroll-button`).hover(() => {

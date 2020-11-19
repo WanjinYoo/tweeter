@@ -46,8 +46,17 @@ const escape =  function(str) {
 };
 
 const createTweetElement = function(tweet) {
-  const duration = moment.duration(tweet[`created_at`], 'milliseconds');
-  const days = duration.days();
+  const $time_Diff = new Date() - tweet[`created_at`];
+  const duration = moment.duration($time_Diff, 'milliseconds');
+  let time = ``;
+  console.log(duration.seconds());
+  if (duration.seconds() > 86400) {
+    time = `${duration.days()} day(s) ago`;
+  } else if (duration.seconds() > 3600) {
+    time = `${duration.hours()} hour(s) ago`;
+  } else {
+    time = `${duration.minutes()} minute(s) ago`;
+  }
   let $tweet = '<article>'
   + `<div class="tweets">`
   + `<div class = "tweetCoordheader">`
@@ -61,7 +70,7 @@ const createTweetElement = function(tweet) {
   + `<h6>${escape(tweet[`content`][`text`])}</h6>`
   + `</div>`
   + `<div class = "tweetCoordFooter">`
-  + `<span>${days}day(s) ago</span>`
+  + `<span>${time}</span>`
   + `<div class = "tweetCoordFooterIcons">`
   + `<i class="fas fa-heart"></i>`
   + `<i class="fas fa-retweet"></i>`
