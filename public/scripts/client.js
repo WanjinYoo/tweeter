@@ -40,6 +40,7 @@ const loadTweets = () => {
 
 const escape =  function(str) {
   let div = document.createElement('div');
+  // eslint-disable-next-line no-undef
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
