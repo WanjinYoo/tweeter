@@ -2,11 +2,18 @@
 
 // };
 $(() => {
+  $(`#error-message`).hide();
+  $("#tweet-text").focus(()=> {
+    $(`#error-message`).hide();
+  });
   $(`.new-tweet form`).submit((event)=> {
     event.preventDefault();
+    $(`#error-message`).empty();
     const $data = $(`#tweet-text`);
     if (!$data.val().length || $data.val().length > 140) {
-      alert(`invalid input`);
+      $(`<i class="fas fa-exclamation-triangle"></i>`
+      + `<p> Please make sure your input is not empty or does not exceed 140 letters</p>`).appendTo(`#error-message`);
+      $(`#error-message`).slideDown();
     } else {
       $data.serialize();
       $.ajax({
@@ -30,6 +37,13 @@ const loadTweets = () => {
       renderTweets(res);
     });
 };
+
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweet) {
   const duration = moment.duration(tweet[`created_at`], 'milliseconds');
   const days = duration.days();
@@ -43,7 +57,7 @@ const createTweetElement = function(tweet) {
   + `<h5>${tweet[`user`][`handle`]}</h5>`
   + `</div>`
   + `<div class = "tweetCoordContent">`
-  + `<h6>${tweet[`content`][`text`]}</h6>`
+  + `<h6>${escape(tweet[`content`][`text`])}</h6>`
   + `</div>`
   + `<div class = "tweetCoordFooter">`
   + `<span>${days}day(s) ago</span>`

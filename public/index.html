@@ -20,6 +20,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src=' https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/nav_toggle.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
@@ -29,8 +30,10 @@
     <nav>
       <span>Tweeter</span>
       <div id = "newtweet"> 
+        <button type="submit" id="nav-button">
         <p><strong>Write</strong> a new tweet</p>
         <i class='fas fa-angle-double-down' style='font-size:24px'></i>
+        </button>
       </div>
     </nav>
    <!-- Header part-->
@@ -47,6 +50,8 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <!-- Create tweets section -->
+      <div id = "error-message">
+      </div>
     <section class="new-tweet">
       <form action="/tweets/" method="POST">
         <div class="textbox">
