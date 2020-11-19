@@ -1,7 +1,7 @@
 nav {
   display: flex;
   height: 120px;
-  background-color: #4056A1;
+  background: #ff6f61;
   color: #ffffff;
   align-content: center;
   border-radius: 5px;
@@ -27,11 +27,29 @@ nav p {
   margin-bottom: 3px;
 }
 nav i{
-  text-align: center;
+  position: absolute;
   font-size:24px;
+
   color:orange;
 }
 nav #newtweet button {
   background: transparent;
   border: none;
+  height: auto;
 }
+.move-up-and-down {
+  animation: MoveUpDown 1s linear infinite;
+  color:red;
+  position: absolute;
+  bottom: 0.5rem;
+}
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0.5rem;
+  }
+  50% {
+    bottom: 1rem;
+  }
+}
+
+

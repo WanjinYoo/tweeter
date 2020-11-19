@@ -21,6 +21,7 @@
     <script src=' https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/nav_toggle.js"></script>
+    <script type="text/javascript" src="/scripts/composer.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
@@ -50,9 +51,10 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <!-- Create tweets section -->
-      <div id = "error-message">
-      </div>
     <section class="new-tweet">
+      <div class = "change-width">
+        <div id = "error-message">
+        </div>
       <form action="/tweets/" method="POST">
         <div class="textbox">
         <label for="tweet-text">What are you humming about?</label>
@@ -63,10 +65,12 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+      <br/>
+    </div>
     </section>
     <br/>
     <br/>
-
+    <button id="scroll-button"><i class="fas fa-angle-double-up"></i></button>
     <div id="tweetLists">
     </div>
 

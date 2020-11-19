@@ -1,6 +1,17 @@
 .new-tweet{
   display: flex;
   flex-direction: column;
+  background-color: #ff6f61;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  margin-left: -50vw;
+  left: 50%;
+}
+.new-tweet .change-width {
+  margin-left: 8%;
+  margin-right: 8%;
+  
 }
 section .textbox{
   border-bottom: 5px solid #545149;
