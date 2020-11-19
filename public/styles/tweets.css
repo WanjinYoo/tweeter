@@ -1,31 +1,32 @@
-#tweets {
+#tweetLists .tweets {
   border: 4px solid #545149;
   height: 12rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-#tweets header {
+#tweetLists .tweets header {
   margin-top: 1.65rem;
 }
-#tweets img {
+#tweetLists .tweets img {
   width: 3rem;
   height: 3rem;
   margin : 1rem;
 }
-#tweets #tweetCoordheader{
+#tweetLists .tweets .tweetCoordheader{
   height: 3rem;
   display: flex;
   justify-content: space-between;
 }
-#tweets #tweetCoordheader2{
+#tweetLists .tweets .tweetCoordheader2{
   display: flex;
 }
-#tweets #tweetCoordheader h5{
+#tweetLists .tweets .tweetCoordheader h5{
  margin-top: 1.8rem;
  margin-right: 2rem;
+ visibility: hidden;
 }
-#tweets #tweetCoordContent{
+#tweetLists .tweets .tweetCoordContent{
   display: flex;
   justify-content: center;
   border-bottom: 4px solid #545149;
@@ -33,24 +34,28 @@
   margin-left: 5%;
   margin-right: 5%;
 }
-#tweets #tweetCoordContent h6{
+#tweetLists .tweets .tweetCoordContent h6{
   font-family: sans-serif;
   font-size: 1.2rem;
 
 }
-#tweets #tweetCoordFooter {
+#tweetLists .tweets .tweetCoordFooter {
   display: flex;
   justify-content: space-between;
   font-size: 1rem;
 }
-#tweets #tweetCoordFooter span {
+#tweetLists .tweets .tweetCoordFooter span {
   margin-left: 2.5rem;
   margin-top: 0.5rem;
 }
-#tweets #tweetCoordFooter #tweetCoordFooterIcons{
+#tweetLists .tweets .tweetCoordFooter .tweetCoordFooterIcons{
   margin-top: 0.5rem;
   margin-right: 1.5rem;
+  visibility: hidden;
 }
-#tweetCoordFooterIcons i{
+#tweetLists .tweets .tweetCoordFooter .tweetCoordFooterIcons i{
   margin: 0.3rem;
+}
+.shadow-effect {
+  box-shadow: 5px 10px;
 }
