@@ -40,12 +40,12 @@ const loadTweets = () => {
 
 const escape =  function(str) {
   let div = document.createElement('div');
-  // eslint-disable-next-line no-undef
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
 const createTweetElement = function(tweet) {
+  //calculates time for the tweets
   const $time_Diff = new Date() - tweet[`created_at`];
   const duration = moment.duration($time_Diff, 'milliseconds');
   let time = ``;
@@ -57,6 +57,7 @@ const createTweetElement = function(tweet) {
   } else {
     time = `${duration.minutes()} minute(s) ago`;
   }
+  // tweet html markup
   let $tweet = '<article>'
   + `<div class="tweets">`
   + `<div class = "tweetCoordheader">`
@@ -82,6 +83,7 @@ const createTweetElement = function(tweet) {
   + `</br>`;
   return $tweet;
 };
+// run for loop to create mulitple tweets and prepend to idex.html
 const renderTweets = function(tweets) {
   const $tweetLists = $(`#tweetLists`).empty();
   for (let key of Object.keys(tweets)) {
@@ -89,6 +91,7 @@ const renderTweets = function(tweets) {
   }
   hovereffect();
 };
+//add hovereffect
 const hovereffect = () => {
   const $tweets = $(`#tweetLists`).find(`.tweets`);
   $tweets.hover(

@@ -1,9 +1,11 @@
 $(() => {
   $(`.container .new-tweet`).hide();
+  //if the invisible button on the top right is clicked, users can create new tweets
   $(`#nav-button`).click(() => {
     $(`.container .new-tweet`).slideDown();
     $(`#nav-button`).hide();
     $(`#tweetLists`).css(`margin-top`,`0rem`);
+    $(`#tweet-text`).focus();
   });
   $(`#nav-button`).hover(() => {
     $(`#nav-button`).css('cursor', 'pointer');
