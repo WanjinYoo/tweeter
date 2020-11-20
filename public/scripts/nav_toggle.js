@@ -7,6 +7,7 @@ $(() => {
     $(`#tweetLists`).css(`margin-top`,`0rem`);
     $(`#tweet-text`).focus();
   });
+  //animation effects on the invisible nav button
   $(`#nav-button`).hover(() => {
     $(`#nav-button`).css('cursor', 'pointer');
     $(`#newtweet i`).addClass(`move-up-and-down`);

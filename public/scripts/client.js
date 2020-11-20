@@ -27,7 +27,6 @@ $(() => {
     }
   });
 });
-
 const loadTweets = () => {
   $.ajax({
     type: `GET`,
