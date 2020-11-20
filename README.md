@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-HTML, CSS, JS, jQuery, momentjs and AJAX were used to design front-end part of the website. 
+HTML, CSS, JS, SASS, jQuery, momentjs and AJAX were used to design front-end part of the website. 
 Node js, Express js and MongoDB back-end for back-end part.
 The app was built with flexbox for reposive design.
 Momentjs library was used to calculate the creation time for tweets.

@@ -11,13 +11,13 @@ nav {
   top: 0;
   bottom: 0;
 }
-nav span{
-  margin : 1.5em;
+nav span {
+  margin: 1.5em;
   font-size: 2.5rem;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
 }
-nav #newtweet{
-  margin : 1.5em;
+nav #newtweet {
+  margin: 1.5em;
   font-size: 1.3rem;
   font-family: sans-serif;
   display: flex;
@@ -26,23 +26,24 @@ nav #newtweet{
 nav p {
   margin-bottom: 3px;
 }
-nav i{
+nav i {
   position: absolute;
-  font-size:24px;
-
-  color:orange;
+  font-size: 24px;
+  color: orange;
 }
 nav #newtweet button {
   background: transparent;
   border: none;
   height: auto;
 }
+
 .move-up-and-down {
   animation: MoveUpDown 1s linear infinite;
-  color:red;
+  color: red;
   position: absolute;
   bottom: 0.5rem;
 }
+
 @keyframes MoveUpDown {
   0%, 100% {
     bottom: 0.5rem;
@@ -52,4 +53,4 @@ nav #newtweet button {
   }
 }
 
-
+/*# sourceMappingURL=nav.css.map */
