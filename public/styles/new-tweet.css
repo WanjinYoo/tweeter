@@ -1,3 +1,5 @@
+
+@media only screen and (max-width: 1024px) {
 .new-tweet{
   display: flex;
   flex-direction: column;
@@ -7,6 +9,7 @@
   display: flex;
   margin-left: -50vw;
   left: 50%;
+}
 }
 .new-tweet .change-width {
   margin-left: 8%;
@@ -47,4 +50,15 @@ section .count-text button{
 section .count-text output{
   font-family: 'Bungee', cursive;
   color: #545149;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet{
+    flex-direction: column;
+    background-color: #ffd0cc;
+    width: 100%;
+    margin-top: 10rem;
+  }
+
 }

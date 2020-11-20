@@ -4,10 +4,8 @@ $(() => {
     
     if ($(window).scrollTop() > 120) {
       $(`#scroll-button`).slideDown();
-      $(`nav`).hide();
     }
     else {
-      $(`nav`).show();
       $(`#scroll-button`).hide();
     }
   });

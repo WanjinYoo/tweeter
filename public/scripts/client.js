@@ -49,10 +49,10 @@ const createTweetElement = function(tweet) {
   const $time_Diff = new Date() - tweet[`created_at`];
   const duration = moment.duration($time_Diff, 'milliseconds');
   let time = ``;
-  console.log(duration.seconds());
-  if (duration.seconds() > 86400) {
+  console.log($time_Diff);
+  if ($time_Diff > 86400000) {
     time = `${duration.days()} day(s) ago`;
-  } else if (duration.seconds() > 3600) {
+  } else if ($time_Diff > 3600000) {
     time = `${duration.hours()} hour(s) ago`;
   } else {
     time = `${duration.minutes()} minute(s) ago`;
